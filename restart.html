@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Restart</title>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+</head>
+<body>
+
+
+	<!-- Reservation Form -->
+	<h2>Make a Reservation</h2>
+
+	<form id = "makeRessie" action="">
+		<label for="name">Name (First Last)</label>
+		    <input type="text" name="name" id="name" placeholder="Your name">
+		    <br><br>
+		<label for="numParty">Number in party</label>
+		    <input name="numParty" id="numParty" placeholder="Number in party">
+		<button type="submit">Make reservation</button>
+	</form>
+
+<br /><br />
+	<!-- Lookup Form -->
+	<h2>Manage Your Reservation</h2>
+	<form id="lookupRessie" action="">
+		<label for="resName">Name for Reservation</label>
+			<input type="text" name="resName" id="resName" placeholder="Enter name on reservation">
+		
+		<button type="submit">Look up reservation</button>
+	</form>
+
+	<!-- Reservation display -->
+
+	<ul id="ressieList">
+		
+	</ul>
+
+<br /><br />
+
+	<h2>Scratchpad</h2>
+	<!-- Remove form -->
+	<!-- <form id="removeRessie" action="">
+		<label for="removeName">Name for Reservation to Cancel</label>
+			<input type="text" name="removeName" id="removeName" placeholder="Enter name on reservation to cancel">
+		
+		<button type="submit">Cancel reservation</button>
+	</form> -->
+	
+
+	<!-- Value -->
+
+	<pre id = "reserve"></pre>
+	
+
+	<!-- Child -->
+
+	<ul id = "list">
+
+	</ul>
+	
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+	     https://firebase.google.com/docs/web/setup#config-web-app -->
+	<script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-auth.js"></script>
+	<script src = "app.js"></script>
+
+</body>
+</html>
