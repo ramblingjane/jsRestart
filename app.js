@@ -1,3 +1,5 @@
+// Using vanilla JavaScript
+
 (function() {
 
 	console.log('test');

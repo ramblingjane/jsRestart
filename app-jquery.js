@@ -74,6 +74,17 @@ $("#lookupRessie").on("submit", function(evt) {
 	});
 });
 
+// Clear form fields
+
+document.getElementById("clearLookup").addEventListener("click", function() {
+	document.getElementById("lookupRessie").reset();
+	document.getElementById("makeRessie").reset();
+	document.getElementById('ressieList').innerHTML = "";
+	console.log("clear form");
+});
+
+
+
 
 // Show reservations on html page
 
