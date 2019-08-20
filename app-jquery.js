@@ -76,10 +76,15 @@ $("#lookupRessie").on("submit", function(evt) {
 
 // Clear form fields
 
-document.getElementById("clearLookup").addEventListener("click", function() {
+document.getElementById("resetForms").addEventListener("click", function() {
 	document.getElementById("lookupRessie").reset();
 	document.getElementById("makeRessie").reset();
-	document.getElementById('ressieList').innerHTML = "";
+	
+	// Clear confirmation message
+	const myNode = document.getElementById("ressieList");
+	while (myNode.firstChild) {
+    	myNode.removeChild(myNode.firstChild);
+	}
 	console.log("clear form");
 });
 
