@@ -24,9 +24,12 @@ $('#makeRessie').on('submit', function(event) {
 
 	resData.name = $('#name').val();
 	resData.numParty = $('#numParty').val();
+    // Add date and time 08/21
+    resData.date = $('#ressieDate').val();
+    resData.time = $('#ressieTime').val();
 
 		console.log(resData);
-        document.getElementById("ressieConfirm").innerHTML = "<p>Thank you</p>";
+        document.getElementById("ressieConfirm").innerHTML = "<p>Thank you, " + resData.name + "!</p>";
 
 	firebase.database().ref('reserve').push(resData);	
 })
@@ -46,8 +49,10 @@ $("#lookupRessie").on("submit", function(evt) {
 			  	resData = childSnapshot.val();
 			  	var myName = resData.name;
 			  	var myNumParty = resData.numParty;
+                var myDate = resData.date;
+                var myTime = resData.time;
 
-			  	console.log(myName + " " + myNumParty);
+			  	console.log(myName + " " + myNumParty + ", " + myDate + " " + myTime);
 			  	console.log(childSnapshot.key);
 			  	console.log("-----");
 
@@ -55,7 +60,7 @@ $("#lookupRessie").on("submit", function(evt) {
 			  	const li = document.createElement('li');
 			  	document.getElementById('ressieList').appendChild(li);
 			  	li.innerHTML = "Hello, " + myName + ". We look forward to seeing your party of " + myNumParty + 
-			  	" <button id = " + childSnapshot.key + " type=\"button\">Cancel reservation</button><br /><br />";
+			  	" at " + myTime + " on " + myDate + ". <button id = " + childSnapshot.key + " type=\"button\">Cancel reservation</button><br /><br />";
 
 			  	// Cancel button function
 			  	document.getElementById(childSnapshot.key).addEventListener("click", function(rmEvt) {
@@ -81,12 +86,17 @@ document.getElementById("resetForms").addEventListener("click", function() {
 	document.getElementById("lookupRessie").reset();
 	document.getElementById("makeRessie").reset();
 	
-	// Clear confirmation message
-	const myNode = document.getElementById("ressieList");
-	while (myNode.firstChild) {
-    	myNode.removeChild(myNode.firstChild);
+	// Clear confirmation messages
+	const listNode = document.getElementById("ressieList");
+	while (listNode.firstChild) {
+    	listNode.removeChild(listNode.firstChild);
 	}
-	console.log("clear form");
+
+    const confirmNode = document.getElementById("ressieConfirm");
+    while (confirmNode.firstChild) {
+        confirmNode.removeChild(confirmNode.firstChild);
+    }
+	console.log("page reset");
 });
 
 // jQuery datepicker code
