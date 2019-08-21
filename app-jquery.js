@@ -26,6 +26,7 @@ $('#makeRessie').on('submit', function(event) {
 	resData.numParty = $('#numParty').val();
 
 		console.log(resData);
+        document.getElementById("ressieConfirm").innerHTML = "<p>Thank you</p>";
 
 	firebase.database().ref('reserve').push(resData);	
 })
@@ -88,6 +89,11 @@ document.getElementById("resetForms").addEventListener("click", function() {
 	console.log("clear form");
 });
 
+// jQuery datepicker code
+
+$("#ressieDate").datepicker(
+    { minDate: 0, maxDate: "+1M + 14D" }
+);
 
 
 

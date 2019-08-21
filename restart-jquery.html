@@ -8,7 +8,8 @@
 
 	<!-- Adding jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
 </head>
 <body>
@@ -19,12 +20,36 @@
 
 	<form id = "makeRessie" action="" aria-labelledby="make reservation">
 		<label for="name">Name (First Last)</label>
-		    <input type="text" name="name" id="name" placeholder="Your name">
+		    <input type="text" name="name" id="name" placeholder="Enter your name">
 		    <br><br>
+		<!-- Adding datepicker -->
+		<label for="ressieDate">Date</label>
+			<input type="text" name="date" id="ressieDate" placeholder="Select a date">
+			<br /><br />
+
+		<label for="ressieTime">Time</label>
+			<input type="text" name="time" id="ressieTime" placeholder="Enter time">
+			<br /><br />
+
 		<label for="numParty">Number in party</label>
-		    <input name="numParty" id="numParty" placeholder="Number in party">
+		    <select name="number" id="numParty">
+		      <option>1</option>
+		      <option selected="selected">2</option>
+		      <option>3</option>
+		      <option>4</option>
+		      <option>5</option>
+		      <option>6</option>
+		      <option>7</option>
+		      <option>8</option>
+		      <option>9</option>
+		      <option>10</option>
+		    </select>
+
+		<br /><br />
 		<button type="submit">Make reservation</button>
 	</form>
+<br />
+	<div id="ressieConfirm"></div>
 
 <br /><br />
 	<!-- Lookup Form -->
