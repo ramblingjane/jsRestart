@@ -1,0 +1,32 @@
+.page-wrapper {
+  margin: 15px;
+  background-color: white;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  margin: 10px;
+}
+
+.blue-column {
+  background-color: white;
+  padding: 15px;
+  border: 2px solid;
+  /*height: 100px;*/ 
+}
+
+.green-column {
+  /*background-color: green;*/
+  padding: 15px;
+  /*height: 100px;*/
+}

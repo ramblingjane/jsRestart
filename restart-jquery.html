@@ -5,6 +5,7 @@
 	<title>JS Restart - jQuery</title>
 	<!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+	<link rel="stylesheet" type="text/css" href="app.css">
 
 	<!-- Adding jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -13,7 +14,9 @@
 
 </head>
 <body>
-
+<div class="page-wrapper">
+	<div class="row">
+		<div class="column"><div class="blue-column">
 <main>
 	<!-- Reservation Form -->
 	<h2>Make a Reservation</h2>
@@ -30,15 +33,25 @@
 		<label for="ressieTime">Time</label>
 			<select name="time" id="ressieTime">
 				<option selected="selected">5:00pm</option>
+				<option>5:15pm</option>
 				<option>5:30pm</option>
+				<option>5:45pm</option>
 				<option>6:00pm</option>
+				<option>6:15pm</option>
 				<option>6:30pm</option>
+				<option>6:45pm</option>
 				<option>7:00pm</option>
+				<option>7:15pm</option>
 				<option>7:30pm</option>
+				<option>7:45pm</option>
 				<option>8:00pm</option>
+				<option>8:15pm</option>
 				<option>8:30pm</option>
+				<option>8:45pm</option>
 				<option>9:00pm</option>
+				<option>9:15pm</option>
 				<option>9:30pm</option>
+				<option>9:45pm</option>
 				<option>10:00pm</option>
 			</select>
 			<br /><br />
@@ -85,18 +98,27 @@
 	<button id="resetForms" type="button">Reset forms</button>
 
 </main>
-<div role="complementary">
-	<h2>Scratchpad</h2>
+</div></div> <!-- column end tags -->
 
-	<!-- Value (from Firebase video) -->
-	<pre id = "reserve"></pre>
-	
+		<div class="column"><div class="green-column">
 
-	<!-- Child (from Firebase video) -->
-	<ul id = "list">
+	<div role="complementary">
+		<h2>Scratchpad</h2>
 
-	</ul>
-</div>	
+		<!-- Value (from Firebase video) -->
+		<pre id = "reserve"></pre>
+		
+
+		<!-- Child (from Firebase video) -->
+		<ul id = "list">
+
+		</ul>
+	</div>
+
+
+</div></div> <!-- column end tags -->
+	</div>
+</div> <!-- page wrapper closing tag -->
 
 	<!-- TODO: Add SDKs for Firebase products that you want to use
 	     https://firebase.google.com/docs/web/setup#config-web-app -->
