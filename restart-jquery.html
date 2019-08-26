@@ -14,13 +14,14 @@
 
 </head>
 <body>
-<div class="page-wrapper">
-	<div class="row">
-		<div class="column"><div class="blue-column">
+<div id="box-container">
+
 <main>
 	<!-- Reservation Form -->
-	<h2>Make a Reservation</h2>
+	<div id="col-1">
 
+	<div id="make-ressie-box">
+	<h2>Make a Reservation</h2>
 	<form id = "makeRessie" action="" aria-labelledby="make reservation">
 		<label for="name">Name (First Last)</label>
 		    <input type="text" name="name" id="name" placeholder="Enter your name">
@@ -77,6 +78,9 @@
 	<div id="ressieConfirm"></div>
 
 <br /><br />
+	</div>
+
+	<div id="manage-ressie-box">
 	<!-- Lookup Form -->
 	<h2>Manage Your Reservation</h2>
 	<form id="lookupRessie" action="" aria-labelledby="look up reservation">
@@ -92,17 +96,18 @@
 	<ul id="ressieList">
 		
 	</ul>
-
+	</div> <!-- manage-ressie -->
 <br />
 
 	<button id="resetForms" type="button">Reset forms</button>
 
+</div> <!-- col-1 -->
 </main>
-</div></div> <!-- column end tags -->
 
-		<div class="column"><div class="green-column">
 
-	<div role="complementary">
+<div id="col-2">
+
+	<div id="scratchpad" role="complementary">
 		<h2>Scratchpad</h2>
 
 		<!-- Value (from Firebase video) -->
@@ -115,11 +120,9 @@
 		</ul>
 	</div>
 
+</div> <!-- col-2 -->
 
-</div></div> <!-- column end tags -->
-	</div>
-</div> <!-- page wrapper closing tag -->
-
+</div> <!-- container end -->
 	<!-- TODO: Add SDKs for Firebase products that you want to use
 	     https://firebase.google.com/docs/web/setup#config-web-app -->
 	<script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-database.js"></script>
