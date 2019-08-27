@@ -8,7 +8,7 @@
 
 #col-1 {
   background-color: blue;
-  width: 400px;
+  /*width: 50%;*/
   /*height: 100%;*/
   display: flex;
   flex-direction: column;
@@ -18,8 +18,9 @@
   background-color: purple;
   display: flex;
   flex-direction: column;
-  width: 400px;
-  height: 100%;
+  padding: 10px;
+  /*width: 50%;*/
+  /*height: 100%;*/
   
 }
 #make-ressie-box {
@@ -39,16 +40,18 @@
 #map-box {
   background-color: yellow;
   height: 100px;
-  width: 25%;
+  width: 100%;
+  padding: 10px;
 }
 
 #hours-box {
   background-color: green;
   height: 200px;
-  width: 25%;
+  width: 50%;
 }
 
 #scratchpad {
   padding: 10px; 
-  /*width: 100%;*/
+  width: 100%;
+  background-color: orange;
 }
